@@ -1,0 +1,287 @@
+/* Global CSS Reset and Consistency Fixes */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Comic Sans MS', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Prevent layout shifts and ensure consistent sizing */
+.MuiContainer-root {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.MuiContainer-maxWidthLg {
+  max-width: 1200px !important;
+}
+
+/* Ensure consistent grid spacing */
+.MuiGrid-container {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.MuiGrid-item {
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Fix card sizing issues */
+.MuiCard-root {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.MuiCardContent-root {
+  flex: 1 !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Desktop-specific improvements */
+@media (min-width: 1200px) {
+  /* lg and xl */
+  .MuiGrid-container {
+    justify-content: center !important;
+    align-items: stretch !important;
+  }
+  
+  .MuiGrid-item {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  /* Ensure consistent card widths on desktop */
+  .MuiCard-root {
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Better spacing for large screens */
+  .MuiContainer-root {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+}
+
+/* Extra large screens (1440px+) */
+@media (min-width: 1440px) {
+  .MuiContainer-root {
+    max-width: 1320px !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+  
+  .MuiCard-root {
+    max-width: 320px !important;
+  }
+}
+
+/* Responsive breakpoints consistency */
+@media (max-width: 599px) {
+  /* xs */
+  .MuiContainer-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+  /* sm */
+  .MuiContainer-root {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  /* md */
+  .MuiContainer-root {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+  
+  /* Better card alignment for medium screens */
+  .MuiGrid-item {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* lg and xl */
+  .MuiContainer-root {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+/* Consistent button sizing */
+.MuiButton-root {
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+}
+
+/* Typography consistency */
+.MuiTypography-root {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scroll on mobile */
+.App {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Fix for MUI Grid spacing issues */
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px !important;
+}
+
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px !important;
+}
+
+@media (min-width: 960px) {
+  .MuiGrid-spacing-md-4 > .MuiGrid-item {
+    padding: 16px !important;
+  }
+  
+  .MuiGrid-spacing-lg-4 > .MuiGrid-item {
+    padding: 16px !important;
+  }
+  
+  .MuiGrid-spacing-xl-5 > .MuiGrid-item {
+    padding: 20px !important;
+  }
+}
+
+/* Consistent chip sizing */
+.MuiChip-root {
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Smooth transitions for all interactive elements */
+.MuiCard-root,
+.MuiPaper-root,
+.MuiButton-root,
+.MuiChip-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Fix for flexbox alignment issues */
+.MuiBox-root {
+  min-width: 0;
+}
+
+/* Ensure consistent heights for flex containers */
+.MuiGrid-item > .MuiCard-root {
+  height: 100% !important;
+}
+
+/* Desktop grid alignment fixes */
+@media (min-width: 1024px) {
+  .MuiGrid-container {
+    align-content: stretch !important;
+  }
+  
+  .MuiGrid-item {
+    align-self: stretch !important;
+  }
+}
+
+/* Responsive font scaling */
+@media (max-width: 599px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Fix for LinearProgress consistency */
+.MuiLinearProgress-root {
+  width: 100% !important;
+}
+
+/* Ensure proper aspect ratios for circular elements */
+.circular-element {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+/* Fix for drawer width on mobile */
+.MuiDrawer-paper {
+  max-width: 85vw !important;
+}
+
+/* Prevent text selection on interactive elements */
+.MuiButton-root,
+.MuiIconButton-root,
+.MuiChip-root {
+  user-select: none !important;
+}
+
+/* Consistent focus states */
+.MuiButton-root:focus,
+.MuiIconButton-root:focus {
+  outline: 2px solid rgba(255, 107, 107, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+/* Additional card stability fixes */
+.MuiCard-root {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Prevent content overflow in cards */
+.MuiCardContent-root > * {
+  max-width: 100% !important;
+}
+
+/* Fix for hover effects on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .MuiCard-root:hover {
+    z-index: 1 !important;
+  }
+}
+
