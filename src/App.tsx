@@ -1,4 +1,5 @@
-
+import React from 'react';
+// Enhanced for June 16, 2025 - Added Material-UI theme configuration
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
