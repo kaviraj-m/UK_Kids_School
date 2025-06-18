@@ -1,1 +1,1 @@
-"# Header Component" 
+"# Hero Section" 
