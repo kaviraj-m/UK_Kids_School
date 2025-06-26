@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">UK Kids School</string>
+    <string name="title_activity_main">UK Kids School</string>
+    <string name="package_name">com.ukkidsschool.app</string>
+    <string name="custom_url_scheme">com.ukkidsschool.app</string>
+</resources>

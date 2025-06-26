@@ -15,7 +15,10 @@ import {
   useTheme,
   useMediaQuery,
 } from '@mui/material';
-import { School, Stars, Menu, Close } from '@mui/icons-material';
+import School from '@mui/icons-material/School';
+import Stars from '@mui/icons-material/Stars';
+import Menu from '@mui/icons-material/Menu';
+import Close from '@mui/icons-material/Close';
 
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
